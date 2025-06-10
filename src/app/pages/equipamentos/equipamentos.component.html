@@ -1,0 +1,28 @@
+<h1 class="titulo">Invent Software Equipamentos</h1>
+
+<h2>Lista de Equipamentos</h2>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Tipo</th>
+      <th>Quantidade</th>
+      <th>Data</th>
+      <th>Tem Estoque?</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let e of equipamentos" class="dados-backend">
+      <td>{{ e.nome }}</td>
+      <td>{{ e.tipo }}</td>
+      <td>{{ e.quantidadeEstoque }}</td>
+      <td>{{ e.dataInclusao | date: 'dd/MM/yyyy HH:mm' }}</td>
+      <td>{{ e.temEstoque ? 'Sim' : 'Não' }}</td>
+      <td>
+        <button (click)="deletar(e.id!)">Deletar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
