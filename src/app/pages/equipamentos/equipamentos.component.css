@@ -16,21 +16,21 @@ h2
     margin-top: 20px;
     font-weight: normal;
     font-size: 35px;
-    color: white;
-    background-color: #000000;
+    color: #FFD700;
     text-align: center;
     border-radius: 8px;
     overflow: hidden;
 }
 th, td
 {
-    border: 2px solid #DDD;
+    border: 2px solid ;
     padding: 8px 12px;
 }
 
 th
 {
-    background-color: #000000;
+    background-color: #DDD;
+    color: black;
     text-align: left;
     padding: 12px 15px;
     font-size: 28px;
