@@ -36,6 +36,16 @@ th
     font-size: 28px;
 }
 
+.delete
+{
+    background-color: #e74c3c;
+}
+
+.delete:hover
+{
+    background-color: #c0392b;
+}
+
 button
 {
     margin: 5px;
@@ -69,4 +79,58 @@ button:hover {
 .dados-backend
 {
     font-size: 25px;
+}
+
+form {
+  max-width: 600px;
+  margin: 20px auto 40px;
+  padding: 20px;
+  background-color: #2c2c2c;
+  border-radius: 8px;
+  color: #ddd;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+label {
+  display: block;
+  margin-bottom: 16px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #ffd700;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+  width: 90%;
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1.5px solid #555;
+  background-color: #444;
+  color: #eee;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus {
+  outline: none;
+  border-color: #ffd700;
+}
+
+button[type="submit"] {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: wheat;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #1e7e34;
 }

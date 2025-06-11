@@ -13,8 +13,8 @@ import { FormsModule } from '@angular/forms';
 export class FormularioEquipamentoComponent {
   @Input() equipamento: Equipamento = {
     id: '', nome: '', tipo: '',
-    quantidadeEmEstoque: 0,
-    dataDeinclusao: ''
+    quantidadeEstoque: 0,
+    dataInclusao: ''
   };
   @Output() salvar = new EventEmitter<Equipamento>();
 

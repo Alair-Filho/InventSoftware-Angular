@@ -1,5 +1,31 @@
 <h1 class="titulo">Invent Software Equipamentos</h1>
 
+<h2>Cadastrar Novo Equipamento</h2>
+<form (ngSubmit)="editando ? atualizarEquipamento() : criarEquipamento()">
+  <label>
+    Nome:
+    <input type="text" [(ngModel)]="novoEquipamento.nome" name="nome" required />
+  </label>
+  <br />
+  <label>
+    Tipo:
+    <input type="text" [(ngModel)]="novoEquipamento.tipo" name="tipo" required />
+  </label>
+  <br />
+  <label>
+    Quantidade em Estoque:
+    <input type="number" [(ngModel)]="novoEquipamento.quantidadeEstoque" name="quantidadeEstoque" required min="0" />
+  </label>
+  <br />
+  <label>
+    Data de Inclusão:
+    <input type="date" [(ngModel)]="novoEquipamento.dataInclusao" name="dataInclusao" required />
+  </label>
+  <br />
+  <button type="submit">{{ editando ? 'Atualizar Equipamento' : 'Criar Equipamento' }}</button>
+  <button type="button" *ngIf="editando" (click)="limparFormulario()">Cancelar</button>
+</form>
+
 <h2>Lista de Equipamentos</h2>
 
 <table border="1">
@@ -18,10 +44,11 @@
       <td>{{ e.nome }}</td>
       <td>{{ e.tipo }}</td>
       <td>{{ e.quantidadeEstoque }}</td>
-      <td>{{ e.dataInclusao | date: 'dd/MM/yyyy HH:mm' }}</td>
-      <td>{{ e.temEstoque ? 'Sim' : 'Não' }}</td>
+      <td>{{ e.dataInclusao | date: 'dd/MM/yyyy' }}</td>
+      <td>{{ e.quantidadeEstoque > 0 ? 'Sim' : 'Não' }}</td>
       <td>
-        <button (click)="deletar(e.id!)">Deletar</button>
+        <button (click)="editarEquipamento(e)">Editar</button>
+        <button (click)="deletar(e.id!)" class="delete">Deletar</button>
       </td>
     </tr>
   </tbody>
